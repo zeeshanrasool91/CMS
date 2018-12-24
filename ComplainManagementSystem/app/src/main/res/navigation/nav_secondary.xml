@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_secondary"
+    app:startDestination="@id/bottomNavFragmentOne">
+
+    <fragment
+        android:id="@+id/bottomNavFragmentOne"
+        android:name="com.appabilities.complainmanagementsystem.screens.complain_fragment.ComplainFragment"
+        tools:layout="@layout/complain_fragment">
+        <action
+            android:id="@+id/action_bottomNavFragmentOne_self"
+            app:destination="@id/bottomNavFragmentOne" />
+        <action
+            android:id="@+id/action_bottomNavFragmentOne_to_complainDetailsActivity"
+            app:destination="@id/complainDetailsActivity" />
+        <action
+            android:id="@+id/action_bottomNavFragmentOne_to_addComplainActivity"
+            app:destination="@id/addComplainActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bottomNavFragmentTwo"
+        android:name="com.appabilities.complainmanagementsystem.screens.order_fragment.OrderFragment"
+        tools:layout="@layout/order_fragment"/>
+    <activity
+        android:id="@+id/complainDetailsActivity"
+        android:name="com.appabilities.complainmanagementsystem.screens.complain_details.ComplainDetailsActivity"
+        android:label="ComplainDetailsActivity"
+        tools:layout="@layout/activity_complain_detail"/>
+    <activity
+        android:id="@+id/addComplainActivity"
+        android:name="com.appabilities.complainmanagementsystem.screens.add_complains.AddComplainActivity"
+        android:label="AddComplainActivity"
+        tools:layout="@layout/activity_add_complain"/>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.appabilities.complainmanagementsystem.screens.profile_fragment.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/profile_fragment"/>
+
+
+</navigation>
